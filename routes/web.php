@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TweetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tweets', function () {
-    return view('tweets.index');
-});
+Route::get('tweets', [TweetController::class, 'index']);
+
+Route::get('tweets/create', [TweetController::class, 'create']);
+
+Route::get('tweets/{id}', [TweetController::class, 'show']);
+
+Route::post('tweets/store', [TweetController::class, 'store']);
+
+Route::post('tweets/delete', [TweetController::class, 'delete']);
+
