@@ -12,22 +12,21 @@
 <body>
     
 
+    <h1>Mein Tweet Page</h1>
 
-<div>
-    <h1>Mein Tweet Page
-    </h1>
-<ul>
-    @foreach($tweets as $tweet)
+    <div class="container">
         
-        <li>
-            This is Title:  {{ $tweet->title }}<br>
-            This is Text: {{ $tweet->text }}<br>
-            <a href="tweets/{{ $tweet->id }}">Zum Tweet</a>
-        </li>
-        
-    @endforeach
-</ul>
-</div>
+        <ul>
+            @foreach($tweets as $tweet)                
+                <li>
+                    Title:  {{ $tweet->title }}<br>
+                    Text: {{ $tweet->text }}<br>
+                    <a href="tweets/{{ $tweet->id }}">Zum Tweet</a>
+                </li>                
+            @endforeach            
+        </ul>
+
+    </div>
 
 
 

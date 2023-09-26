@@ -1,6 +1,6 @@
 <div>
 
-    <form action="/tweet/store" method="POST">
+    <form action="/tweets/store" method="POST">
         @csrf
 
     <label for="title">Title:</label>
@@ -9,7 +9,7 @@
     <label for="text">Text:</label>
     <textarea name="text" id="text" cols="30" rows="10"></textarea>
 
-    <button type="submit">Senden</button> 
+    <button type="submit">Send</button> 
     </form>
 
 

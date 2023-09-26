@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TweetController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,5 +27,5 @@ Route::get('tweets/{id}', [TweetController::class, 'show']);
 
 Route::post('tweets/store', [TweetController::class, 'store']);
 
-Route::post('tweets/delete', [TweetController::class, 'delete']);
+Route::post('tweets/delete/{id}', [TweetController::class, 'delete']);
 
