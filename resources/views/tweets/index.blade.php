@@ -12,16 +12,25 @@
 <body>
     
 
-    <h1>Mein Tweet Page</h1>
+    <h1>Mein Tweet Page</h1><br>
+    
+    <p class="button">
+        <button style="background:red; color:white;" 
+        onclick="window.location.href = 'http://localhost/tweets/create';">
+        Create a new Tweet!</button>
+    </p>
+
 
     <div class="container">
         
         <ul>
             @foreach($tweets as $tweet)                
                 <li>
-                    Title:  {{ $tweet->title }}<br>
-                    Text: {{ $tweet->text }}<br>
-                    <a href="tweets/{{ $tweet->id }}">Zum Tweet</a>
+                    <div class="tweet">
+                        Title:  {{ $tweet->title }}<br>
+                        Text: {{ $tweet->text }}<br>
+                        <a href="tweets/{{ $tweet->id }}">Zum Tweet</a>
+                    </div> 
                 </li>                
             @endforeach            
         </ul>

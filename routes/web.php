@@ -29,3 +29,7 @@ Route::post('tweets/store', [TweetController::class, 'store']);
 
 Route::post('tweets/delete/{id}', [TweetController::class, 'delete']);
 
+Route::get('tweets/edit/{id}', [TweetController::class, 'edit']);
+
+Route::post('tweets/update/{id}', [TweetController::class, 'update']);
+

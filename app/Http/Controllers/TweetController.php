@@ -79,6 +79,25 @@ class TweetController extends Controller
         // leite weiter zu der /tweets route
         return redirect('/tweets');
 
-
     }
+
+    public function edit($id) {
+        $tweet = Tweet::find($id);
+
+        return view('tweets.edit', [
+            'tweet' => $tweet
+        ]);
+    }
+
+    public function update(Request $request, $id) {
+        $tweet = Tweet::find($id);
+
+
+        $tweet->title = $request->title;
+        $tweet->text = $request->text;
+        $tweet->update();
+
+        return redirect('/tweets');
+    }
+
 }

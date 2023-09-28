@@ -17,3 +17,9 @@ h1 {
 .create {
     background-color: #FF0000;
 }
+
+.button {
+  text-align: center;
+  color: rgb(25, 25, 207);
+
+}
