@@ -1,5 +1,5 @@
 <header class="header">
-    <p class="header-text">MINI-TWITTER</p>
+    <a class="header-text" href="/tweets">MINI-TWITTER</a>
     <div class="navbar">
         <div>
             <a href="/tweets">My Tweets</a>

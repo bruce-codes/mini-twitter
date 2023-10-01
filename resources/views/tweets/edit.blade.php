@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mini-Twitter</title>
+    @vite('resources/css/app.css')
 </head>
 <body>
     @include('includes.header')
-        <div>
+        <div class="edit-blade">
             <form action="/tweets/update/{{ $tweet->id }}" method="POST">
                 @csrf
                 <label for="title">Title:</label>
