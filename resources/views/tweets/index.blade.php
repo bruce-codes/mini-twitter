@@ -4,42 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Twitter von Penny</title>
-
+    <title>Mini-Twitter</title>
     @vite('resources/css/app.css')
-
 </head>
 <body>
-    
-
-    <h1>Mein Tweet Page</h1><br>
-    
-    <p class="button">
-        <button style="background:red; color:white;" 
-        onclick="window.location.href = 'http://localhost/tweets/create';">
-        Create a new Tweet!</button>
-    </p>
-
-
-    <div class="container">
-        
-        <ul>
-            @foreach($tweets as $tweet)                
-                <li>
-                    <div class="tweet">
-                        Title:  {{ $tweet->title }}<br>
-                        Text: {{ $tweet->text }}<br>
-                        <a href="tweets/{{ $tweet->id }}">Zum Tweet</a>
-                    </div> 
-                </li>                
-            @endforeach            
-        </ul>
-
-    </div>
-
-
-
-
-
+    @include('includes.header')
+        <div class="feed"><h1 class="feed">FEED FROM</h1></div>
+        <div class="bk"><h1 class="bk">Bruce Kaya</h1></div>                                
+            <ul class="no-bullets">
+                 @foreach($tweets as $tweet)                
+                    <li>
+                        <div class="tweet">
+                            {{ $tweet->title }}<br><br>
+                            {{ $tweet->text }}<br><br>
+                            <a class="show" href="tweets/{{ $tweet->id }}">Show Tweet</a>
+                        </div> 
+                    </li>         
+                @endforeach            
+            </ul>
+    @include('includes.footer')
 </body>
 </html>

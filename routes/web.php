@@ -33,3 +33,4 @@ Route::get('tweets/edit/{id}', [TweetController::class, 'edit']);
 
 Route::post('tweets/update/{id}', [TweetController::class, 'update']);
 
+// Route::get('tweets/footer', [TweetController::class, 'footer']);
